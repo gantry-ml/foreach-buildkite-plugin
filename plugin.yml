@@ -1,0 +1,19 @@
+name: Foreach
+description: Duplicates a set of pipeline steps
+author: https://github.com/gantry-ml
+requirements: ["bash"]
+configuration:
+  properties:
+    foreach:
+      type: [string, array]
+    key:
+      type: string
+      default: key
+    steps:
+      type: string
+    wait_between:
+      type: boolean
+  required:
+    - foreach
+    - steps
+  additionalProperties: false
